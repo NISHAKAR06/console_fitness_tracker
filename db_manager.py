@@ -16,13 +16,13 @@ class DBManager:
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS workouts (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                user_id INTEGER, date TEXT, type TEXT, duration REAL
+                user_id INTEGER, date TEXT, time TEXT, type TEXT, duration REAL
             )
         """)
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS meals (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                user_id INTEGER, date TEXT, food TEXT, calories REAL
+                user_id INTEGER, date TEXT, time TEXT, food TEXT, calories REAL
             )
         """)
         self.conn.commit()
@@ -37,3 +37,5 @@ class DBManager:
             result = cursor.fetchone()
         self.conn.commit()
         return result
+
+
