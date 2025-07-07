@@ -20,7 +20,7 @@ def user_menu():
 ====== User Management ======
 1. Create New User
 2. Select Existing User
--------------------------------------
+-----------------------------
 """)
 
 def main():
